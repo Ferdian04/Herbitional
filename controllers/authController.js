@@ -131,11 +131,13 @@ exports.signin = async (req, res) => {
         });
       }
 
-      console.log(data[0].user_id);
+      let user_id = data[0].user_id;
+      let fullname = data[0].fullname;
 
-      const token = jwt.sign({ user_email_address }, process.env.JWT_SECRET, { expiresIn: "1h" });
+      const token = jwt.sign({ user_id, user_email_address, fullname }, process.env.JWT_SECRET, { expiresIn: "1h" });
       return res.status(201).json({
         status: "Success",
+        fullname,
         user_email_address,
         user_password,
         message: "logged in successfully",
@@ -156,3 +158,31 @@ exports.protected = (req, res) => {
     message: "Rute yang dilindungi. Selamat datang, " + req.user.user_email_address,
   });
 };
+
+exports.profile = async (req, res) => {
+  try {
+    console.log("Profile .....");
+    const user_id = req.params.id;
+    console.log(user_id);
+    db = `
+  SELECT * FROM tabel_riwayat_user JOIN tabel_artikel ON tabel_riwayat_user.artikel_id = tabel_artikel.id
+  WHERE tabel_riwayat_user.user_id = "${user_id}"
+  `;
+
+    connection.query(db, function (err, data) {
+      console.log(data);
+      return res.status(201).json({
+        status: "Success",
+        riwayat: data,
+        requestAt: new Date().toISOString(),
+      });
+    });
+  } catch (err) {
+    return res.status(err.code).json({
+      status: "false",
+      message: err.message,
+    });
+  }
+};
+
+exports.inputdbriwayat = async (req, res) => {};
