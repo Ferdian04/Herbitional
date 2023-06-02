@@ -16,7 +16,7 @@ app.use("/api/v1/medicine", medicineRouter);
 app.use("/api/v1/user", userRouter);
 
 app.get("/", function (req, res) {
-  res.send(`Hello World ${process.env.JWT_SECRET}`);
+  res.send(`Project kita top 15 aamiin`);
 });
 
 console.log(process.env.JWT_SECRET);
