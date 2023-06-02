@@ -192,7 +192,7 @@ URL: http://url-api.com/api/{version}/{Group}/{endpoint}
 - URL:
   - http://wwww.url-api.com/api/v1/medicine/searchmed/:search
 - Endpoint:
-  - `specificmed/:id_artikel`
+  - `searchmed/:search`
 - Method:
   - `GET`
 - Headers:
