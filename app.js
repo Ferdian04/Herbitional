@@ -2,8 +2,9 @@ require("dotenv").config();
 
 const cors = require("cors");
 const express = require("express");
-const authRoutes = require("./routes/authRoute");
+const authRoutes = require("./routes/authRouter");
 const medicineRouter = require("./routes/medicineRouter");
+const userRouter = require("./routes/userRouter");
 const app = express();
 
 app.use(express.json());
@@ -12,14 +13,10 @@ app.use(cors({ origin: "*" }));
 
 app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/medicine", medicineRouter);
+app.use("/api/v1/user", userRouter);
 
 app.get("/", function (req, res) {
   res.send(`Hello World ${process.env.JWT_SECRET}`);
-});
-
-app.get("/greeting/:name", (req, res) => {
-  const name = req.params.name;
-  res.send(`Hello, ${name}!`);
 });
 
 console.log(process.env.JWT_SECRET);
