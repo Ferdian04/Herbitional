@@ -55,7 +55,7 @@ exports.signup = async (req, res) => {
   `;
 
     connection.query(db, function (err, data) {
-      if (data.length > 0) {
+      if (data.length >= 1) {
         return res.status(409).json({
           status: "Failed",
           requestAt: new Date().toISOString(),
