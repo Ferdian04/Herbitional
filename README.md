@@ -94,7 +94,6 @@ URL: http://url-api.com/api/{version}/{Group}/{endpoint}
 ```
 {
     status: "Success",
-    code: 201,
     riwayat: [
         {
             id_riwayat: 26,
@@ -102,6 +101,35 @@ URL: http://url-api.com/api/{version}/{Group}/{endpoint}
             nama_penyakit: "Batuk"
         }
     ]
+}
+```
+
+### [2] - Input History
+
+- URL:
+  - http://wwww.url-api.com/api/v1/user/inshistori
+- Endpoint:
+  - `/inshistori`
+- Method:
+  - `POST`
+- Headers:
+  - `Authorization` : Bearer < Access-Token >
+- Request Body:
+  - `user_id` : integer
+  - `penyakit_id`: integer
+
+```
+{
+    user_id : 26,
+    penyakit_id: 1
+}
+```
+- Response (example):
+
+```
+{
+    status: "Success",
+    code: 201
 }
 ```
 
