@@ -9,5 +9,6 @@ router.use((req, res, next) => {
 });
 
 router.get("/profile/:id", jwtAuth(), userController.profile);
+router.post("/inshistori", jwtAuth(), userController.inshistori);
 
 module.exports = router;

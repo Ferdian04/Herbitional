@@ -24,3 +24,24 @@ exports.profile = async (req, res) => {
     });
   }
 };
+
+exports.inshistori = async (req, res) => {
+  try {
+    console.log("Input .....");
+    let { user_id, penyakit_id } = req.body;
+    console.log(user_id);
+    console.log(penyakit_id);
+    let ins_db = `INSERT INTO tabel_riwayat_user (user_id, penyakit_id) VALUES ('${user_id}','${penyakit_id}');`;
+    connection.query(ins_db, function (err, data) {
+      return res.status(201).json({
+        status: "Success",
+        requestAt: new Date().toISOString(),
+      });
+    });
+  } catch (err) {
+    return res.status(err.code).json({
+      status: "Failed",
+      message: err.message,
+    });
+  }
+};
