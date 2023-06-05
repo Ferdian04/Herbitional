@@ -9,7 +9,7 @@ link
 
 # Herbitional API Planning & Documentation
 
-URL: http://url-api.com/api/{version}/{Group}/{endpoint}
+URL: http://wwww.url-api.com/api/{version}/{Group}/{endpoint}
 
 ---
 
@@ -18,7 +18,7 @@ URL: http://url-api.com/api/{version}/{Group}/{endpoint}
 ### [1] - Register
 
 - URL:
-  - http://url-api.com/api/v1/auth/register
+  - http://wwww.url-api.com/api/v1/auth/register
 - Endpoint:
   - `/register`
 - Method:
