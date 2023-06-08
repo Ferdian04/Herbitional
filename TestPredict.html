@@ -1,0 +1,45 @@
+<!-- ini nyoba doang tp blm bs sih -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Predict Disease</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.10.0/dist/tf.min.js"></script>
+  <script src="tfjs_model/model.json"></script>
+</head>
+<body>
+  <h1>Predict Disease</h1>
+  <div>
+    <label for="symptoms">Enter Symptoms:</label>
+    <input type="text" id="symptoms">
+    <button onclick="predictDisease()">Predict</button>
+  </div>
+  <div id="result"></div>
+
+  <script>
+    async function predictDisease() {
+      const model = await tf.loadLayersModel('tfjs_model/model.json');
+
+      const symptomsInput = document.getElementById('symptoms').value;
+      const symptoms = symptomsInput.split(',');
+
+      const inputVector = [];
+      for (let i = 0; i < cols_train.length; i++) {
+        const symptom = cols_train[i];
+        if (symptoms.includes(symptom)) {
+          inputVector.push(1);
+        } else {
+          inputVector.push(0);
+        }
+      }
+
+      const x = tf.tensor2d([inputVector]);
+      const prediction = model.predict(x);
+      const predictedClass = prediction.argMax(1).dataSync()[0];
+
+      const predictedDisease = label_encoder.classes_[predictedClass];
+
+      document.getElementById('result').innerHTML = `Predicted Disease: ${predictedDisease}`;
+    }
+  </script>
+</body>
+</html>
