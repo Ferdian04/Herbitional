@@ -5,7 +5,6 @@ import string
 import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
-from nltk.stem import WordNetLemmatizer
 import tensorflow as tf
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.preprocessing import LabelEncoder
@@ -31,24 +30,20 @@ def preprocess_input_text(input_text):
     stop_words = set(stopwords.words('indonesian'))
     input_text = [word for word in input_text if word not in stop_words]
 
-    # Lemmatization
-    lemmatizer = WordNetLemmatizer()
-    input_text = [lemmatizer.lemmatize(word) for word in input_text]
-
     # Convert the preprocessed data back to string
     input_text = ' '.join(input_text)
 
     return input_text
 
 # Load the saved model
-model = tf.keras.models.load_model('artikel-obat-model.h5')
+model = tf.keras.models.load_model('tf-model/artikel-obat-model.h5')
 
 # Load the vectorizer and label encoder
-vectorizer = joblib.load('vectorizer.pkl')
-label_encoder = joblib.load('label_encoder.pkl')
+vectorizer = joblib.load('tf-model/vectorizer.pkl')
+label_encoder = joblib.load('tf-model/label_encoder.pkl')
 
 # Load the preprocessed data
-khasiat = pd.read_csv('khasiat2.csv')
+khasiat = pd.read_csv('khasiat.csv')
 
 # Transform the input text using the loaded vectorizer
 def predict(input_text):
@@ -74,12 +69,12 @@ def predict(input_text):
 
 
 # Test the prediction function
-input_text = 'usus buntu'
+input_text = 'demam'
 predicted_labels, probabilities, predicted_ids = predict(input_text)
 
 # Print the results
 print(f"User input: {input_text}")
 print("Top 5 Predicted Labels:")
 for label, probability, predicted_id in zip(predicted_labels, probabilities,predicted_ids):
-    if probability >= 0.2:
+    if probability >= 0:
         print(f"{predicted_id} {label}: {probability:.4f}")
