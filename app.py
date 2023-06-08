@@ -5,7 +5,7 @@ import tensorflow as tf
 
 # Load the label encoder and model
 label_encoder = joblib.load('label_encoder.pkl')
-model = tf.keras.models.load_model('./diseasePredict.h5')
+model = tf.keras.models.load_model('diseasePredict.h5', compile=False)
 
 app = Flask(__name__)
 
@@ -29,4 +29,4 @@ def predict():
     return jsonify(response)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=8080)
