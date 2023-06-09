@@ -130,7 +130,7 @@ exports.signin = async (req, res) => {
       let user_id = data[0].user_id;
       let fullname = data[0].fullname;
 
-      const token = jwt.sign({ user_id, user_email_address, fullname }, process.env.JWT_SECRET, { expiresIn: "1h" });
+      const token = jwt.sign({ user_id, user_email_address, fullname }, process.env.JWT_SECRET);
       return res.status(201).json({
         status: "Success",
         message: "logged in successfully",
