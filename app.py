@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify
 import joblib
 import numpy as np
 import tensorflow as tf
+import os
 
 # Load the label encoder and model
 label_encoder = joblib.load('label_encoder.pkl')
