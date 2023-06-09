@@ -5,6 +5,7 @@ const express = require("express");
 const authRoutes = require("./routes/authRouter");
 const medicineRouter = require("./routes/medicineRouter");
 const userRouter = require("./routes/userRouter");
+const diseasesRouter = require("./routes/diseasesRouter");
 const app = express();
 
 app.use(express.json());
@@ -14,6 +15,7 @@ app.use(cors({ origin: "*" }));
 app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/medicine", medicineRouter);
 app.use("/api/v1/user", userRouter);
+app.use("/api/v1/diseases", diseasesRouter);
 
 app.get("/", function (req, res) {
   res.send(`Project kita top 15 aamiin`);
