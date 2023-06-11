@@ -8,7 +8,7 @@ This is API Service for Capstone Project on Bangkit 2022. For Api Documentation 
 
 # Herbitional API Planning & Documentation
 
-URL: http://www.url-api.com/api/{version}/{Group}/{endpoint}
+URL: https://herbitional-v3-hzyvjvw72a-uc.a.run.app/api/{version}/{Group}/{endpoint}
 
 ---
 
@@ -17,7 +17,7 @@ URL: http://www.url-api.com/api/{version}/{Group}/{endpoint}
 ### [1] - Register
 
 - URL:
-  - http://www.url-api.com/api/v1/auth/register
+  - https://herbitional-v3-hzyvjvw72a-uc.a.run.app/api/v1/auth/register
 - Endpoint:
   - `/register`
 - Method:
@@ -45,7 +45,7 @@ URL: http://www.url-api.com/api/{version}/{Group}/{endpoint}
 ### [2] - Login
 
 - URL:
-  - http://wwww.url-api.com/api/v1/auth/login
+  - https://herbitional-v3-hzyvjvw72a-uc.a.run.app/api/v1/auth/login
 - Endpoint:
   - `/login`
 - Method:
@@ -81,7 +81,7 @@ URL: http://www.url-api.com/api/{version}/{Group}/{endpoint}
 ### [1] - Profile
 
 - URL:
-  - http://wwww.url-api.com/api/v1/user/profile/:id
+  - https://herbitional-v3-hzyvjvw72a-uc.a.run.app/api/v1/user/profile/:id
 - Endpoint:
   - `/profile/:id`
 - Method:
@@ -106,7 +106,7 @@ URL: http://www.url-api.com/api/{version}/{Group}/{endpoint}
 ### [2] - Input History
 
 - URL:
-  - http://wwww.url-api.com/api/v1/user/inshistori
+  - https://herbitional-v3-hzyvjvw72a-uc.a.run.app/api/v1/user/inshistori
 - Endpoint:
   - `/inshistori`
 - Method:
@@ -137,7 +137,7 @@ URL: http://www.url-api.com/api/{version}/{Group}/{endpoint}
 ### [1] - Home
 
 - URL:
-  - http://wwww.url-api.com/api/v1/medicine/home
+  - https://herbitional-v3-hzyvjvw72a-uc.a.run.app/api/v1/medicine/home
 - Endpoint:
   - `/home`
 - Method:
@@ -188,7 +188,7 @@ URL: http://www.url-api.com/api/{version}/{Group}/{endpoint}
 ### [2] - Specific Medicine
 
 - URL:
-  - http://wwww.url-api.com/api/v1/medicine/specificmed/:id_artikel
+  - https://herbitional-v3-hzyvjvw72a-uc.a.run.app/api/v1/medicine/specificmed/:id_artikel
 - Endpoint:
   - `specificmed/:id_artikel`
 - Method:
@@ -217,7 +217,7 @@ URL: http://www.url-api.com/api/{version}/{Group}/{endpoint}
 ### [3] - Search Medicine (DO NOT USE)
 
 - URL:
-  - http://wwww.url-api.com/api/v1/medicine/searchmed/:search
+  - https://herbitional-v3-hzyvjvw72a-uc.a.run.app/api/v1/medicine/searchmed/:search
 - Endpoint:
   - `searchmed/:search`
 - Method:
