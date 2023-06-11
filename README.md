@@ -16,12 +16,12 @@ This is ML Model and API Service for Capstone Project on Bangkit 2022. For Api D
 
 # Herbitional ML API Documentation
 
-URL: http://www.url-api.com/{endpoint}
+URL: https://predict-disease-hzyvjvw72a-uc.a.run.app/{endpoint}
 
 ### [1] - Predict Disease
 
 - URL:
-  - http://www.url-api.com/predict
+  - https://predict-disease-hzyvjvw72a-uc.a.run.app/predict
 - Endpoint:
   - `/predict`
 - Method:
