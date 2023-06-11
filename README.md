@@ -5,13 +5,14 @@ This is ML Model and API Service for Capstone Project on Bangkit 2022. For Api D
 ## Built with
 
 - flask 2.0
-- flask-mysql 1.5.2
 - joblib 1.2.0
 - nltk 3.8.1
 - numpy 1.24.3
 - pandas 2.0.2
 - scikit-learn 1.2.2
 - tensorflow 2.9.3
+- mysql==0.0.3
+- Flask-MySQLdb==1.0.1
 
 # Herbitional ML API Documentation
 
