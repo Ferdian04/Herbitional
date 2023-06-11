@@ -11,6 +11,7 @@ from sklearn.preprocessing import LabelEncoder
 import joblib
 from flask import Flask, jsonify, request
 from flask_mysqldb import MySQL
+import os
 
 # Download NLTK resources
 nltk.download('punkt')
