@@ -45,7 +45,7 @@ vectorizer = joblib.load('tf-model/vectorizer.pkl')
 label_encoder = joblib.load('tf-model/label_encoder.pkl')
 
 # Load the preprocessed data
-khasiat = pd.read_csv('khasiat.csv')
+khasiat = pd.read_csv('tabel_artikel_1.csv')
 
 # Set up Flask application and MySQL connection
 app = Flask(__name__)
@@ -64,7 +64,7 @@ def predict(input_text):
     # Make predictions using the loaded model
     predictions = model.predict(input_text_tfidf.toarray())
 
-    # Get the top 5 predicted labels and their corresponding probabilities
+    # Get the top 10 predicted labels and their corresponding probabilities
     top_k = 10
     top_k_indices = np.argsort(predictions, axis=1)[:, -top_k:][0]
     top_k_probabilities = predictions[0, top_k_indices]
