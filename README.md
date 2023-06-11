@@ -5,6 +5,16 @@ This is API Service for Capstone Project on Bangkit 2022. For Api Documentation 
 ## Built with
 
 - Express 4.18.2
+- bcrypt 5.1.0
+- body-parser 1.20.2
+- cookie-parser 1.4.6
+- cors 2.8.5
+- dotenv 16.0.3
+- jsonwebtoken 9.0.0
+- module-name 0.0.1-security
+- multer 1.4.5-lts.1
+- mysql 2.18.1
+- validator 13.9.0
 
 # Herbitional API Planning & Documentation
 
