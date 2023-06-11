@@ -38,7 +38,7 @@ def preprocess_input_text(input_text):
     return input_text
 
 # Load the saved model
-model = tf.keras.models.load_model('tf-model/artikel-obat-model.h5')
+model = tf.keras.models.load_model('tf-model/artikel-obat-model.h5', compile=False)
 
 # Load the vectorizer and label encoder
 vectorizer = joblib.load('tf-model/vectorizer.pkl')
@@ -136,4 +136,4 @@ def index():
 
 # Run the Flask application
 if __name__ == '__main__':
-    app.run(debug=True, port=8080)
+    app.run(debug=True, host='0.0.0.0', port=int(os.environ.get('PORT', 8080)))
