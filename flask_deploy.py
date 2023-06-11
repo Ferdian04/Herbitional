@@ -50,9 +50,9 @@ khasiat = pd.read_csv('tabel_artikel.csv')
 
 # Set up Flask application and MySQL connection
 app = Flask(__name__)
-app.config['MYSQL_HOST'] = 'localhost'  # MySQL server host
-app.config['MYSQL_USER'] = 'fahrialmd'  # MySQL username
-app.config['MYSQL_PASSWORD'] = '7'  # MySQL password
+app.config['MYSQL_HOST'] = '34.128.76.143'  # MySQL server host
+app.config['MYSQL_USER'] = 'root'  # MySQL username
+app.config['MYSQL_PASSWORD'] = 'herbitional'  # MySQL password
 app.config['MYSQL_DB'] = 'herb'  # MySQL database name
 
 mysql = MySQL(app)
