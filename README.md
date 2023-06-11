@@ -1,7 +1,6 @@
 # Herbitional API
 
-This is API Service for Capstone Project on Bangkit 2022. For Api Documentation you can visit this link:
-link
+This is API Service for Capstone Project on Bangkit 2022. For Api Documentation you can see below
 
 ## Built with
 
@@ -215,7 +214,7 @@ URL: http://www.url-api.com/api/{version}/{Group}/{endpoint}
 }
 ```
 
-### [3] - Search Medicine
+### [3] - Search Medicine (DO NOT USE)
 
 - URL:
   - http://wwww.url-api.com/api/v1/medicine/searchmed/:search
