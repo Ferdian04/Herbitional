@@ -4,7 +4,6 @@ This is ML Model and API Service for Capstone Project on Bangkit 2022. For Api D
 
 ## Built with
 
-- Express 4.18.2
 - flask 2.0
 - flask-mysql 1.5.2
 - joblib 1.2.0
