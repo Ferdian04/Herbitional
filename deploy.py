@@ -62,19 +62,24 @@ def predict(input_text):
     predicted_labels = label_encoder.inverse_transform(top_k_indices)
 
     # Retrieve the IDs of the predicted labels
-    predicted_ids = khasiat.loc[top_k_indices, 'id']
+    print(predicted_labels)
+    selected_ids = []  # Initialize an empty list
+
+    for name in predicted_labels:
+        selected_ids.extend(khasiat.loc[khasiat['nama_obat'] == name, 'id'].tolist())
+    print(selected_ids)
 
     # Return the top 5 predicted labels, their probabilities, and IDs
-    return predicted_labels[::-1], top_k_probabilities[::-1], predicted_ids[::-1]
+    return predicted_labels[::-1], top_k_probabilities[::-1]
 
 
 # Test the prediction function
-input_text = 'demam'
-predicted_labels, probabilities, predicted_ids = predict(input_text)
+input_text = 'sakit'
+predicted_labels, probabilities = predict(input_text)
 
 # Print the results
 print(f"User input: {input_text}")
 print("Top 5 Predicted Labels:")
-for label, probability, predicted_id in zip(predicted_labels, probabilities,predicted_ids):
+for label, probability in zip(predicted_labels, probabilities):
     if probability >= 0:
-        print(f"{predicted_id} {label}: {probability:.4f}")
+        print(f"{label}: {probability:.4f}")

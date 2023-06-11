@@ -45,7 +45,7 @@ vectorizer = joblib.load('tf-model/vectorizer.pkl')
 label_encoder = joblib.load('tf-model/label_encoder.pkl')
 
 # Load the preprocessed data
-khasiat = pd.read_csv('tabel_artikel_1.csv')
+khasiat = pd.read_csv('tabel_artikel.csv')
 
 # Set up Flask application and MySQL connection
 app = Flask(__name__)
@@ -72,8 +72,11 @@ def predict(input_text):
     # Convert the predicted label indices to category labels
     predicted_labels = label_encoder.inverse_transform(top_k_indices)
 
+
     # Retrieve the IDs of the predicted labels
-    predicted_ids = khasiat.loc[top_k_indices, 'id']
+    predicted_ids = []
+    for name in predicted_labels:
+        predicted_ids.extend(khasiat.loc[khasiat['nama_obat'] == name, 'id'].tolist())
 
     # Connect to the database
     conn = mysql.connection
@@ -81,6 +84,7 @@ def predict(input_text):
 
     # Retrieve the entire row from MySQL based on the predicted ID
     results = []
+    
     for predicted_id in predicted_ids:
         cursor.execute(f"SELECT * FROM tabel_artikel WHERE id = {predicted_id}")
         row = cursor.fetchone()
@@ -111,10 +115,15 @@ def handle_prediction():
     for label, probability, result in zip(predicted_labels, probabilities, results):
         if probability >= 0.1:
             prediction = {
-                'predicted_id': result[0],  # Assuming ID is the first column in your_table
-                'label': label,
                 'probability': probability.item(),
-                'row': result  # Entire row from the database
+                'predicted_id': result[0],  # Assuming ID is the first column in your_table
+                'predicted_label': label,
+                'id': result[0],
+                'label': result[1],
+                'khasiat': result[2],
+                'efek_samping': result[3],
+                'deskripsi': result[4],
+                'foto': result[5] 
             }
             response['predictions'].append(prediction)
 
