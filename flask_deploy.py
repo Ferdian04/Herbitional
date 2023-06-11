@@ -10,7 +10,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.preprocessing import LabelEncoder
 import joblib
 from flask import Flask, jsonify, request
-import os
+from flask_mysqldb import MySQL
 
 # Download NLTK resources
 nltk.download('punkt')
@@ -45,9 +45,18 @@ vectorizer = joblib.load('tf-model/vectorizer.pkl')
 label_encoder = joblib.load('tf-model/label_encoder.pkl')
 
 # Load the preprocessed data
-khasiat = pd.read_csv('khasiat.csv')
+khasiat = pd.read_csv('tabel_artikel.csv')
 
-# Transform the input text using the loaded vectorizer
+# Set up Flask application and MySQL connection
+app = Flask(__name__)
+app.config['MYSQL_HOST'] = 'localhost'  # MySQL server host
+app.config['MYSQL_USER'] = 'fahrialmd'  # MySQL username
+app.config['MYSQL_PASSWORD'] = '7'  # MySQL password
+app.config['MYSQL_DB'] = 'herb'  # MySQL database name
+
+mysql = MySQL(app)
+
+# Transform the input text using the loaded vectorizer and retrieve row from MySQL based on predicted ID
 def predict(input_text):
     input_text = preprocess_input_text(input_text)
     input_text_tfidf = vectorizer.transform([input_text])
@@ -55,7 +64,7 @@ def predict(input_text):
     # Make predictions using the loaded model
     predictions = model.predict(input_text_tfidf.toarray())
 
-    # Get the top 5 predicted labels and their corresponding probabilities
+    # Get the top 10 predicted labels and their corresponding probabilities
     top_k = 10
     top_k_indices = np.argsort(predictions, axis=1)[:, -top_k:][0]
     top_k_probabilities = predictions[0, top_k_indices]
@@ -63,15 +72,29 @@ def predict(input_text):
     # Convert the predicted label indices to category labels
     predicted_labels = label_encoder.inverse_transform(top_k_indices)
 
+
     # Retrieve the IDs of the predicted labels
-    predicted_ids = khasiat.loc[top_k_indices, 'id']
+    predicted_ids = []
+    for name in predicted_labels:
+        predicted_ids.extend(khasiat.loc[khasiat['nama_obat'] == name, 'id'].tolist())
 
-    # Return the top 5 predicted labels, their probabilities, and IDs
-    return predicted_labels[::-1], top_k_probabilities[::-1], predicted_ids[::-1]
+    # Connect to the database
+    conn = mysql.connection
+    cursor = conn.cursor()
 
+    # Retrieve the entire row from MySQL based on the predicted ID
+    results = []
+    
+    for predicted_id in predicted_ids:
+        cursor.execute(f"SELECT * FROM tabel_artikel WHERE id = {predicted_id}")
+        row = cursor.fetchone()
+        if row:
+            results.append(row)
 
-# Create a Flask application
-app = Flask(__name__)
+    cursor.close()
+
+    # Return the top 5 predicted labels, their probabilities, and the retrieved rows
+    return predicted_labels[::-1], top_k_probabilities[::-1], results[::-1]
 
 # Define a route to handle incoming requests
 @app.route('/predict', methods=['POST'])
@@ -79,8 +102,8 @@ def handle_prediction():
     # Get the input text from the request
     input_text = request.json['input-text']
 
-    # Perform prediction
-    predicted_labels, probabilities, predicted_ids = predict(input_text)
+    # Perform prediction and retrieve rows from the database
+    predicted_labels, probabilities, results = predict(input_text)
 
     # Create a response JSON
     response = {
@@ -88,13 +111,19 @@ def handle_prediction():
         'predictions': []
     }
 
-    # Add predictions to the response JSON
-    for label, probability, predicted_id in zip(predicted_labels, probabilities, predicted_ids):
+    # Add predictions and retrieved rows to the response JSON
+    for label, probability, result in zip(predicted_labels, probabilities, results):
         if probability >= 0.1:
             prediction = {
-                'predicted_id': predicted_id,
-                'label': label,
-                'probability': probability.item()
+                'probability': probability.item(),
+                'predicted_id': result[0],  # Assuming ID is the first column in your_table
+                'predicted_label': label,
+                'id': result[0],
+                'label': result[1],
+                'khasiat': result[2],
+                'efek_samping': result[3],
+                'deskripsi': result[4],
+                'foto': result[5] 
             }
             response['predictions'].append(prediction)
 
@@ -107,4 +136,4 @@ def index():
 
 # Run the Flask application
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=int(os.environ.get('PORT', 8080)))
+    app.run(debug=True, port=8080)
