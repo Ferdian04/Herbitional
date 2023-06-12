@@ -101,7 +101,7 @@ def predict(input_text):
 @app.route('/predict', methods=['POST'])
 def handle_prediction():
     # Get the input text from the request
-    input_text = request.json['input-text']
+    input_text = request.form.get('input-text')
 
     # Perform prediction and retrieve rows from the database
     predicted_labels, probabilities, results = predict(input_text)
