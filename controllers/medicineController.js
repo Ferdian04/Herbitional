@@ -8,7 +8,7 @@ exports.specificmed = async (req, res) => {
   SELECT * FROM tabel_artikel WHERE id = ${id_artikel}
     `;
     connection.query(db, function (err, data) {
-      if ((data.length = [])) {
+      if (data.length <= 0) {
         return res.status(404).json({
           status: "Failed",
           requestAt: new Date().toISOString(),
