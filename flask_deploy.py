@@ -11,6 +11,7 @@ from sklearn.preprocessing import LabelEncoder
 import joblib
 from flask import Flask, jsonify, request
 from flask_mysqldb import MySQL
+import os
 
 # Download NLTK resources
 nltk.download('punkt')
@@ -38,7 +39,7 @@ def preprocess_input_text(input_text):
     return input_text
 
 # Load the saved model
-model = tf.keras.models.load_model('tf-model/artikel-obat-model.h5')
+model = tf.keras.models.load_model('tf-model/artikel-obat-model.h5', compile=False)
 
 # Load the vectorizer and label encoder
 vectorizer = joblib.load('tf-model/vectorizer.pkl')
@@ -49,9 +50,9 @@ khasiat = pd.read_csv('tabel_artikel.csv')
 
 # Set up Flask application and MySQL connection
 app = Flask(__name__)
-app.config['MYSQL_HOST'] = 'localhost'  # MySQL server host
-app.config['MYSQL_USER'] = 'fahrialmd'  # MySQL username
-app.config['MYSQL_PASSWORD'] = '7'  # MySQL password
+app.config['MYSQL_HOST'] = '34.128.76.143'  # MySQL server host
+app.config['MYSQL_USER'] = 'root'  # MySQL username
+app.config['MYSQL_PASSWORD'] = 'herbitional'  # MySQL password
 app.config['MYSQL_DB'] = 'herb'  # MySQL database name
 
 mysql = MySQL(app)
@@ -100,7 +101,7 @@ def predict(input_text):
 @app.route('/predict', methods=['POST'])
 def handle_prediction():
     # Get the input text from the request
-    input_text = request.json['input-text']
+    input_text = request.form.get('input-text')
 
     # Perform prediction and retrieve rows from the database
     predicted_labels, probabilities, results = predict(input_text)
@@ -136,4 +137,4 @@ def index():
 
 # Run the Flask application
 if __name__ == '__main__':
-    app.run(debug=True, port=8080)
+    app.run(debug=True, host='0.0.0.0', port=int(os.environ.get('PORT', 8080)))
