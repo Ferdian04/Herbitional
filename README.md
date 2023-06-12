@@ -18,7 +18,7 @@ This is ML Model and API Service for Capstone Project on Bangkit 2022. For Api D
 
 URL: https://search-engine-v5-hzyvjvw72a-uc.a.run.app/{endpoint}
 
-### [1] - Predict Disease
+### [1] - Search Engine
 
 - URL:
   - https://search-engine-v5-hzyvjvw72a-uc.a.run.app/predict
