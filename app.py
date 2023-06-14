@@ -21,7 +21,7 @@ mysql = MySQL(app)
 
 @app.route('/predict', methods=['POST'])
 def predict():
-    data = request.from.get("symptoms")  # Mendapatkan data input dari permintaan POST
+    data = request.form.get("symptoms")  # Mendapatkan data input dari permintaan POST
     # symptoms = data['symptoms']  # Mendapatkan gejala dari data input
 
     array_data = data.split(",")
