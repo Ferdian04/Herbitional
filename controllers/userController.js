@@ -4,17 +4,26 @@ exports.profile = async (req, res) => {
   try {
     console.log("Profile .....");
     const user_id = req.params.id;
-    console.log(user_id);
     db = `
-    SELECT tabel_riwayat_user.id_riwayat, tabel_penyakit.id_penyakit, tabel_penyakit.nama_penyakit FROM tabel_riwayat_user JOIN tabel_penyakit ON tabel_riwayat_user.penyakit_id = tabel_penyakit.id_penyakit
+    SELECT tabel_riwayat_user.id_riwayat, tabel_penyakit.id_penyakit, tabel_penyakit.nama_penyakit
+    FROM tabel_riwayat_user
+    JOIN tabel_penyakit ON tabel_riwayat_user.penyakit_id = tabel_penyakit.id_penyakit
     WHERE tabel_riwayat_user.user_id = "${user_id}"
     `;
 
+    db1 = `SELECT fullname, user_email FROM user_login WHERE user_id = ${user_id}`;
+
     connection.query(db, function (err, data) {
-      return res.status(201).json({
-        status: "Success",
-        requestAt: new Date().toISOString(),
-        riwayat: data,
+      connection.query(db1, function (err, data1) {
+        const fullname = data1[0].fullname;
+        const user_email = data1[0].user_email;
+        return res.status(201).json({
+          status: "Success",
+          requestAt: new Date().toISOString(),
+          fullname: fullname,
+          user_email: user_email,
+          riwayat: data,
+        });
       });
     });
   } catch (err) {
@@ -29,8 +38,6 @@ exports.inshistori = async (req, res) => {
   try {
     console.log("Input .....");
     let { user_id, penyakit_id } = req.body;
-    console.log(user_id);
-    console.log(penyakit_id);
     let ins_db = `INSERT INTO tabel_riwayat_user (user_id, penyakit_id) VALUES ('${user_id}','${penyakit_id}');`;
     connection.query(ins_db, function (err, data) {
       return res.status(201).json({
