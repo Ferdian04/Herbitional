@@ -195,7 +195,7 @@ URL: https://herbitional-v3-hzyvjvw72a-uc.a.run.app/api/{version}/{Group}/{endpo
 }
 ```
 
-### [2] - Specific Medicine
+### [2] - 
 
 - URL:
   - https://herbitional-v3-hzyvjvw72a-uc.a.run.app/api/v1/medicine/specificmed/:id_artikel
@@ -348,6 +348,38 @@ URL: https://herbitional-v3-hzyvjvw72a-uc.a.run.app/api/{version}/{Group}/{endpo
             nama_obat: "Daun Panahan",
             deskripsi: "Herba menahun dan banyak membentuk anakan. Batangnya panjang dan tumbuh ke atas, sering membentuk akar o,5- im panjangnya pada bagian kaki. Daun tunggal berhadapan, berbentuk lanset dengan pangkal dan ujung meruncing, tepi rata, berwarna hijau keunguan. Bunga di ujung batang berwarna hijau keunguan. Buah berupa buah kendaga.",
             foto_obat: "example.jpg"
+        }
+    ]
+}
+```
+
+## Group: Disease
+
+### [1] - Specific Disease
+
+- URL:
+  - https://herbitional-v3-hzyvjvw72a-uc.a.run.app/api/v1/diseases/specificdis/:id_penyakit
+- Endpoint:
+  - `specificdis/:id_penyakit`
+- Method:
+  - `GET`
+- Headers:
+  - `Authorization` : Bearer < Access-Token >
+- Response (example) :
+
+```
+{
+    status: "Success",
+    code: 201,
+    artikel: [
+        {
+            id_penyakit: 1,
+            nama_penyakit: "Abses Anus",
+            links-href: "https://www.klikdokter.com/penyakit/masalah-pencernaan/abses-anus",
+            deskripsi_penyakit_1: "Abses anus merupakan kondisi di mana terdapat pengumpulan pus atau nanah di sekitar anus, yang disertai rasa nyeri. Sebagian besar kasus abses anus disebabkan oleh infeksi pada kelenjar-kelenjar kecil yang terdapat di sekitar anus.",
+            deskripsi_penyakit_2: "Tipe abses anus yang paling umum terjadi adalah abses perianal. Kondisi ini paling sering tampak sebagai benjolan yang menyerupai bisul di sekitar anus, yang dapat berwarna merah dan teraba hangat. Abses anus yang berlokasi di jaringan yang berposisi lebih dalam lebih jarang ditemui, dan dapat tidak tampak.",
+            anjuran_penanganan_1: "Penanganan dari abses anus pada sebagian besar kasus adalah dengan drainase pembedahan, di mana dilakukan insisi di sekitar anus untuk melakukan drainase dari abses tersebut. Penanganan untuk mengalirkan isi dari abses penting untuk dilakukan, sebelum abses pecah.",
+            anjuran_penanganan_2: "Abses anus yang dangkal dapat ditindaklanjuti menggunakan obat bius lokal. Namun abses anus yang dalam, bisa saja membutuhkan perawatan inap serta melibatkan dokter spesialis anestesiologi untuk pembiusan. Setelah prosedur penanganan, dokter dapat meresepkan pengobatan untuk mengatasi nyeri atau antibiotik bila dinilai dibutuhkan."
         }
     ]
 }
