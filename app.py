@@ -21,11 +21,14 @@ mysql = MySQL(app)
 
 @app.route('/predict', methods=['POST'])
 def predict():
-    data = request.json  # Mendapatkan data input dari permintaan POST
-    symptoms = data['symptoms']  # Mendapatkan gejala dari data input
+    data = request.from.get("symptoms")  # Mendapatkan data input dari permintaan POST
+    # symptoms = data['symptoms']  # Mendapatkan gejala dari data input
+
+    array_data = data.split(",")
+    array_data = [int(num) for num in array_data]
 
     # Mengubah gejala menjadi vektor input
-    x = np.array(symptoms)  # Menggunakan gejala langsung sebagai vektor input
+    x = np.array(array_data)  # Menggunakan gejala langsung sebagai vektor input
     x = x.reshape(1, -1)  # Mengubah bentuk vektor menjadi (1, panjang_vektor)
 
     # Melakukan prediksi penyakit menggunakan model
