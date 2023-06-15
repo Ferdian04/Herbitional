@@ -3,15 +3,16 @@ const connection = require("../mysql/connect");
 exports.profile = async (req, res) => {
   try {
     console.log("Profile .....");
-    const user_id = req.params.id;
+    const { jwt } = req;
+    console.log(jwt.user_id);
     db = `
     SELECT tabel_riwayat_user.id_riwayat, tabel_penyakit.id_penyakit, tabel_penyakit.nama_penyakit
     FROM tabel_riwayat_user
     JOIN tabel_penyakit ON tabel_riwayat_user.penyakit_id = tabel_penyakit.id_penyakit
-    WHERE tabel_riwayat_user.user_id = "${user_id}"
+    WHERE tabel_riwayat_user.user_id = "${jwt.user_id}"
     `;
 
-    db1 = `SELECT fullname, user_email FROM user_login WHERE user_id = ${user_id}`;
+    db1 = `SELECT fullname, user_email FROM user_login WHERE user_id = ${jwt.user_id}`;
 
     connection.query(db, function (err, data) {
       connection.query(db1, function (err, data1) {
