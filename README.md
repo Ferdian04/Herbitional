@@ -1,6 +1,6 @@
 # Herbitional ML
 
-This is ML Model and API Service for Capstone Project on Bangkit 2022. For Api Documentation you can see below
+This is ML Model and API Service for Capstone Project on Bangkit 2023. For Api Documentation you can see below
 
 ## Built with
 
