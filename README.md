@@ -14,6 +14,9 @@ This is ML Model and API Service for Capstone Project on Bangkit 2023. For Api D
 - mysql 0.0.3
 - Flask-MySQLdb 1.0.1
 
+# Dataset
+https://drive.google.com/drive/folders/1LN_P-naMNHDxxtwHe2Z7p4ownJ5igEZR?usp=sharing
+
 # Herbitional ML API Documentation
 
 URL: https://search-engine-v5-hzyvjvw72a-uc.a.run.app/{endpoint}
