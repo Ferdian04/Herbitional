@@ -16,6 +16,10 @@ This is API Service for Capstone Project on Bangkit 2023. For Api Documentation 
 - mysql 2.18.1
 - validator 13.9.0
 
+## Cloud Infrastructure
+
+![Nama Alternatif](https://storage.googleapis.com/herbitionalbucket/github/Cloud.png)
+
 # Herbitional API Planning & Documentation
 
 URL: https://herbitional-v3-hzyvjvw72a-uc.a.run.app/api/{version}/{Group}/{endpoint}
