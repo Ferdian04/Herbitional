@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.form.external.GejalaExternalActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/back"
+            android:layout_marginTop="32dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_gejala_eksternal_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="Gejala Eksternal"
+            android:layout_marginTop="32dp"
+            android:textColor="@color/brown_primary"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_gejala_eksternal_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="Pilih gejala eksternal yang anda rasakan..."
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_gejala_eksternal_note"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/quicksand_regular"
+                android:text="*(boleh kosong/lebih dari satu)"
+                android:layout_marginStart="16dp"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_gejala_eksternal_description" />
+
+            <CheckBox
+                android:id="@+id/cb_malnutrisi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Malnutrisi"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_gejala_eksternal_note" />
+
+            <CheckBox
+                android:id="@+id/cb_tempat_kurang_sanitasi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tinggal/berkunjung ke tempat kurang sanitasi"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_malnutrisi" />
+
+            <CheckBox
+                android:id="@+id/cb_makanan_minuman_tinggi_purin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mengkonsumsi makanan/minuman tinggi purin"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_tempat_kurang_sanitasi" />
+
+            <CheckBox
+                android:id="@+id/cb_makanan_minuman_tidak_diolah_dengan_tepat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mengkonsumsi makanan/minuman yang tidak diolah dengan tepat"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_makanan_minuman_tinggi_purin" />
+
+            <CheckBox
+                android:id="@+id/cb_makanan_minuman_kadaluwarsa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mengkonsumsi makanan/minuman kedaluwarsa"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_makanan_minuman_tidak_diolah_dengan_tepat" />
+
+            <CheckBox
+                android:id="@+id/cb_makanan_panas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mengonsumsi makanan yang panas"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_makanan_minuman_kadaluwarsa" />
+
+            <CheckBox
+                android:id="@+id/cb_terkena_udara_dingin_panas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Terkena Udara dingin atau panas"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_makanan_panas" />
+
+            <CheckBox
+                android:id="@+id/cb_terpapar_sinar_matahari"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Terpapar sinar matahari"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_terkena_udara_dingin_panas" />
+
+            <CheckBox
+                android:id="@+id/cb_lembab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lembab"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_terpapar_sinar_matahari" />
+
+            <CheckBox
+                android:id="@+id/cb_dehidrasi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Dehidrasi"
+                android:textSize="12sp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/btn_next"
+                app:layout_constraintTop_toBottomOf="@+id/cb_lembab" />
+
+            <Button
+                android:id="@+id/btn_next"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="16dp"
+                android:background="@drawable/button_shape"
+                android:text="LANJUT"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+
+
+</LinearLayout>

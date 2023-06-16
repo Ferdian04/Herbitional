@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.detail_medicine.DetailMedicineActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/progress_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Memuat..."
+            android:textAlignment="center"
+            android:fontFamily="@font/quicksand_medium"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/linearLayout2" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/iv_detail_medicine"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:scaleType="fitCenter" />
+
+                <TextView
+                    android:id="@+id/tv_medicine_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:visibility="gone"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/bg_text_view"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="10dp"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tv_medicine_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:justificationMode="inter_word"
+                android:lineSpacingMultiplier="1" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp">
+
+                <!--           <TableRow-->
+                <!--               android:layout_width="match_parent"-->
+                <!--               android:layout_height="wrap_content"-->
+                <!--               android:layout_marginBottom="8dp">-->
+
+                <!--               <TextView-->
+                <!--                   android:layout_width="wrap_content"-->
+                <!--                   android:layout_height="wrap_content"-->
+                <!--                   android:textSize="14sp"-->
+                <!--                   android:layout_marginEnd="16dp"-->
+                <!--                   android:text="Kategori" />-->
+
+                <!--               <TextView-->
+                <!--                   android:id="@+id/tv_medicine_category"-->
+                <!--                   android:layout_width="match_parent"-->
+                <!--                   android:layout_height="wrap_content"-->
+                <!--                   android:textSize="14sp"-->
+                <!--                   android:layout_weight="1"-->
+                <!--                   android:justificationMode="inter_word"-->
+                <!--                   android:textAlignment="viewStart"-->
+                <!--                   android:text="@string/category" />-->
+                <!--           </TableRow>-->
+
+                <!--           <TableRow-->
+                <!--               android:layout_width="match_parent"-->
+                <!--               android:layout_height="wrap_content"-->
+                <!--               android:layout_marginBottom="8dp">-->
+
+                <!--               <TextView-->
+                <!--                   android:layout_width="wrap_content"-->
+                <!--                   android:layout_height="wrap_content"-->
+                <!--                   android:layout_marginEnd="16dp"-->
+                <!--                   android:textSize="14sp"-->
+                <!--                   android:text="Komposisi" />-->
+
+                <!--               <TextView-->
+                <!--                   android:id="@+id/medicine_composition"-->
+                <!--                   android:layout_width="match_parent"-->
+                <!--                   android:layout_height="wrap_content"-->
+                <!--                   android:layout_weight="1"-->
+                <!--                   android:textSize="14sp"-->
+                <!--                   android:justificationMode="inter_word"-->
+                <!--                   android:text="@string/composition" />-->
+                <!--           </TableRow>-->
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:id="@+id/tv_title_med_efficacy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:visibility="gone"
+                        android:text="Khasiat"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_medicine_efficacy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:justificationMode="inter_word"
+                        android:textSize="14sp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp">
+
+                    <TextView
+                        android:id="@+id/tv_title_med_side_effect"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:visibility="gone"
+                        android:text="Efek Samping"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_medicine_side_effect"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_weight="1"
+                        android:justificationMode="inter_word"
+                        android:textSize="14sp" />
+                </TableRow>
+
+                <!--           <TableRow-->
+                <!--               android:layout_width="match_parent"-->
+                <!--               android:layout_height="wrap_content"-->
+                <!--               android:layout_marginBottom="8dp">-->
+
+                <!--               <TextView-->
+                <!--                   android:layout_width="wrap_content"-->
+                <!--                   android:layout_height="wrap_content"-->
+                <!--                   android:layout_marginEnd="16dp"-->
+                <!--                   android:textSize="14sp"-->
+                <!--                   android:text="Cara Pembuatan"/>-->
+
+                <!--               <TextView-->
+                <!--                   android:id="@+id/tv_medicine_recipe"-->
+                <!--                   android:layout_width="match_parent"-->
+                <!--                   android:layout_height="wrap_content"-->
+                <!--                   android:layout_weight="1"-->
+                <!--                   android:textSize="14sp"-->
+                <!--                   android:justificationMode="inter_word"-->
+                <!--                   />-->
+                <!--           </TableRow>-->
+            </TableLayout>
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

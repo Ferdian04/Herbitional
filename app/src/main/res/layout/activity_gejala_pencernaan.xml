@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.form.pencernaan.GejalaPencernaanActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/back"
+            android:layout_marginTop="32dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_gejala_pencernaan_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="Gejala Pencernaan"
+            android:layout_marginTop="32dp"
+            android:textColor="@color/brown_primary"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_gejala_pencernaan_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="Pilih gejala pencernaan yang anda rasakan..."
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_gejala_pencernaan_note"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/quicksand_regular"
+                android:text="*(boleh kosong/lebih dari satu)"
+                android:layout_marginStart="16dp"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_gejala_pencernaan_description" />
+
+            <CheckBox
+                android:id="@+id/cb_darah_pada_feses"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Darah pada feses"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_gejala_pencernaan_note" />
+
+            <CheckBox
+                android:id="@+id/cb_lendir_pada_feses"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lendir pada feses"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_darah_pada_feses" />
+
+            <CheckBox
+                android:id="@+id/cb_penurunan_air_kemih"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Penurunan produksi air kemih"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_lendir_pada_feses" />
+
+            <CheckBox
+                android:id="@+id/cb_feses_cair"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Feses cair"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_penurunan_air_kemih" />
+
+            <CheckBox
+                android:id="@+id/cb_feses_pucat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Feses berwarna pucat"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_feses_cair" />
+
+            <CheckBox
+                android:id="@+id/cb_nyeri_gesekan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nyeri saat bergesekan dengan pakaian"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_feses_pucat" />
+
+            <CheckBox
+                android:id="@+id/cb_sembelit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sembelit"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_nyeri_gesekan" />
+
+            <CheckBox
+                android:id="@+id/cb_feses_keras"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Feses keras"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_sembelit" />
+
+            <CheckBox
+                android:id="@+id/cb_feses_bercacing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Terdapat cacing pada feses"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_feses_keras" />
+
+            <CheckBox
+                android:id="@+id/cb_rasa_buang_air_tak_tertahan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rasa buang air yang tak tertahan"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_feses_bercacing" />
+
+            <CheckBox
+                android:id="@+id/cb_panas_dada"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rasa panas seperti terbakar di dada"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_rasa_buang_air_tak_tertahan" />
+
+            <CheckBox
+                android:id="@+id/cb_nyeri_ulu_hati"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rasa nyeri di ulu hati"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_panas_dada"/>
+
+            <CheckBox
+                android:id="@+id/cb_perut_atas_penuh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rasa penuh di perut di bagian atas"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_nyeri_ulu_hati" />
+
+            <CheckBox
+                android:id="@+id/cb_bab_kurang_3_seminggu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BAB kurang dari 3 kali seminggu"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_perut_atas_penuh" />
+
+            <CheckBox
+                android:id="@+id/cb_benjolan_anus_setelah_bab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Muncul benjolan di anus setelah BAB"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_bab_kurang_3_seminggu" />
+
+            <CheckBox
+                android:id="@+id/cb_benjolan_anus_merah_muda"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Benjolan di anus berwarna merah muda"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_benjolan_anus_setelah_bab" />
+
+
+            <CheckBox
+                android:id="@+id/cb_feses_gelap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Feses berwarna gelap"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_benjolan_anus_merah_muda" />
+
+
+            <CheckBox
+                android:id="@+id/cb_urine_gelap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Urine berwarna gelap"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_feses_gelap" />
+
+            <CheckBox
+                android:id="@+id/cb_sering_buang_gas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Sering buang gas"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_urine_gelap" />
+
+            <CheckBox
+                android:id="@+id/cb_sering_bersendawa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Sering bersendawa"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_sering_buang_gas" />
+
+
+            <CheckBox
+                android:id="@+id/cb_kembung"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Kembung"
+                android:textSize="12sp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toTopOf="@+id/btn_next"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_sering_bersendawa" />
+
+            <Button
+                android:id="@+id/btn_next"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="16dp"
+                android:background="@drawable/button_shape"
+                android:text="LANJUT"
+                android:fontFamily="@font/quicksand_bold"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+
+
+</LinearLayout>

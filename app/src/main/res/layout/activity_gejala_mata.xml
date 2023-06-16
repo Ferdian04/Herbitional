@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.form.mata.GejalaMataActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/back"
+            android:layout_marginTop="32dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_gejala_mata_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="Gejala Mata"
+            android:layout_marginTop="32dp"
+            android:textColor="@color/brown_primary"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_gejala_mata_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="Pilih gejala mata yang anda rasakan..."
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_gejala_mata_note"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/quicksand_regular"
+                android:text="*(boleh kosong/lebih dari satu)"
+                android:layout_marginStart="16dp"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_gejala_mata_description" />
+
+            <CheckBox
+                android:id="@+id/cb_selaput_putih_jadi_kuning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Selaput putih mata menjadi kuning"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_gejala_mata_note" />
+
+            <CheckBox
+                android:id="@+id/cb_mata_kering"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mata kering"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_selaput_putih_jadi_kuning" />
+
+            <CheckBox
+                android:id="@+id/cb_kelopak_mata_gatal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kelopak mata gatal"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_mata_kering" />
+
+            <CheckBox
+                android:id="@+id/cb_mata_gatal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mata gatal"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_kelopak_mata_gatal" />
+
+            <CheckBox
+                android:id="@+id/cb_pengelihatan_kabur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pengelihatan kabur"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_mata_gatal" />
+
+            <CheckBox
+                android:id="@+id/cb_mata_berair"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mata berair"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_pengelihatan_kabur" />
+
+            <CheckBox
+                android:id="@+id/cb_mata_merah"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mata merah"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_mata_berair" />
+
+            <CheckBox
+                android:id="@+id/cb_benjolan_di_kelopak_tidak_nyeri"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Benjolan di kelopak mata dan tidak nyeri"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_mata_merah" />
+
+            <CheckBox
+                android:id="@+id/cb_benjolan_di_kelopak_nyeri"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Benjolan di kelopak mata dan nyeri"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_benjolan_di_kelopak_tidak_nyeri" />
+
+            <CheckBox
+                android:id="@+id/cb_benjolan_kemerahan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Benjolan kemerahan"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_benjolan_di_kelopak_nyeri" />
+
+            <CheckBox
+                android:id="@+id/cb_mata_bengkak"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mata bengkak"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_benjolan_kemerahan" />
+
+            <CheckBox
+                android:id="@+id/cb_mata_panas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mata terasa panas"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_mata_bengkak"/>
+
+            <CheckBox
+                android:id="@+id/cb_kelopak_memerah"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kelopak mata memerah"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_mata_panas" />
+
+            <CheckBox
+                android:id="@+id/cb_melihat_lingkaran_di_sekeliling_cahaya"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Melihat lingkaran di sekeliling cahaya"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_kelopak_memerah" />
+
+            <CheckBox
+                android:id="@+id/cb_sensitif_cahaya"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sensitif terhadap cahaya"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_melihat_lingkaran_di_sekeliling_cahaya" />
+
+            <CheckBox
+                android:id="@+id/cb_pengelihatan_dekat_buruk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Penglihatan jauh baik, dekat buruk"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_sensitif_cahaya" />
+
+
+            <CheckBox
+                android:id="@+id/cb_pengelihatan_jauh_buruk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Penglihatan jauh kabur, dekat membaik"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_pengelihatan_dekat_buruk" />
+
+            <CheckBox
+                android:id="@+id/cb_pengelihatan_ganda"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Pengelihatan ganda"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_pengelihatan_jauh_buruk" />
+
+            <CheckBox
+                android:id="@+id/cb_mata_nyeri"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Mata nyeri"
+                android:textSize="12sp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/btn_next"
+                app:layout_constraintTop_toBottomOf="@+id/cb_pengelihatan_ganda" />
+
+            <Button
+                android:id="@+id/btn_next"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="16dp"
+                android:background="@drawable/button_shape"
+                android:text="LANJUT"
+                android:fontFamily="@font/quicksand_bold"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+
+
+</LinearLayout>

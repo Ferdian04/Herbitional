@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Herbitional</string>
+    <!--    additonal-->
+    <string name="masuk">Masuk</string>
+    <string name="daftar">Daftar</string>
+    <string name="nama">Nama</string>
+    <string name="email">Email</string>
+    <string name="kata_sandi">Kata Sandi</string>
+    <string name="belum_akun">Belum Punya Akun?</string>
+    <string name="sudah_akun">Sudah Punya Akun?</string>
+    <string name="rekomendasi">Rekomendasi</string>
+    <string name="lupa_password">Lupa Kata Sandi?</string>
+    <string name="terms">Dengan melanjutkan , Anda menyetujui persyaratan layanan dan kebijakan privasi.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="mulai">Mulai!</string>
+    <string name="ungkap_keluhan">Ungkapkan Keluhan Anda!</string>
+    <string name="deskripsi_survey">Cari tahu keluhan anda dan temukan obat alternatif</string>
+    <string name="halo">Halo</string>
+
+    <string name="nama_obat">Jamu Beras Kencur</string>
+    <string name="komposisi_obat">Beras Kencur, Air, Gula.</string>
+    <string name="khasiat_obat">Menghangatkan tubuh, meningkatkan stamina.</string>
+    <string name="cari">Cari</string>
+    <string name="pofile">Pofile</string>
+    <string name="history">Riwayat</string>
+    <string name="disease_name">Nama Penyakit</string>
+    <string name="logout_confirm">Apakah Anda yakin ingin keluar?</string>
+    <string name="tv_medicine_description">Jamu Beras Kencur merupakan salah satu jenis obat tradisional yang dibuat dengan bahan-bahan rumahan dan telah dipercaya secara turun-temurun</string>
+    <string name="category">Kategori (Jamu/OHT/FitoFarmaka)</string>
+    <string name="composition">Komposisinya</string>
+    <string name="efficacy">Khasiat atau manfaatnya</string>
+    <string name="side_effect">Efek Sampingnya</string>
+    <string name="recipe">Resepnya</string>
+    <string name="suggest">Anda mungkin mencari</string>
+    <string name="user">User</string>
+    <string name="gejala_umum">Gejala Umum</string>
+</resources>

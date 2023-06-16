@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.form.kulit.GejalaKulitActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/back"
+            android:layout_marginTop="32dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_gejala_kulit_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="Gejala Kulit"
+            android:layout_marginTop="32dp"
+            android:textColor="@color/brown_primary"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_gejala_kulit_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="Pilih gejala kulit yang anda rasakan..."
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_gejala_kulit_note"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/quicksand_regular"
+                android:text="*(boleh kosong/lebih dari satu)"
+                android:layout_marginStart="16dp"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_gejala_kulit_description" />
+
+
+
+            <CheckBox
+                android:id="@+id/cb_infeksi_jamur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Infeksi Jamur"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_gejala_kulit_note" />
+
+            <CheckBox
+                android:id="@+id/cb_benjolan_kecil_keras"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Benjolan kecil dengan kulit mengeras"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_infeksi_jamur" />
+
+            <CheckBox
+                android:id="@+id/cb_kemerahan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kemerahan"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_benjolan_kecil_keras" />
+
+            <CheckBox
+                android:id="@+id/cb_bengkak"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bengkak"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_kemerahan" />
+
+            <CheckBox
+                android:id="@+id/cb_bernanah"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bernanah"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_bengkak" />
+
+            <CheckBox
+                android:id="@+id/cb_ruam_cacing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ruam merah berbentuk cacing"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_bernanah" />
+
+            <CheckBox
+                android:id="@+id/cb_anus_gatal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Area anus gatal"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_ruam_cacing" />
+
+            <CheckBox
+                android:id="@+id/cb_bercak"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bercak putih/cokelat"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_anus_gatal" />
+
+            <CheckBox
+                android:id="@+id/cb_gatal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gatal"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_bercak" />
+
+            <CheckBox
+                android:id="@+id/cb_kulit_kuning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kulit menjadi kuning"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_gatal" />
+
+            <CheckBox
+                android:id="@+id/cb_iritasi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Iritasi kulit"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_kulit_kuning" />
+
+            <CheckBox
+                android:id="@+id/cb_kulit_kasar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kulit menjadi kasar"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_iritasi" />
+
+            <CheckBox
+                android:id="@+id/cb_melepuh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Melepuh"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_kulit_kasar" />
+
+            <CheckBox
+                android:id="@+id/cb_muncul_benjolan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Muncul Benjolan"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_melepuh" />
+
+            <CheckBox
+                android:id="@+id/cb_tonjolan_coklat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Muncul tonjolan berwarna coklat, pink, putih"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_muncul_benjolan" />
+
+            <CheckBox
+                android:id="@+id/cb_kulit_bersisik"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Kulit bersisik"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_tonjolan_coklat" />
+
+            <CheckBox
+                android:id="@+id/cb_keringat_berlebih"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Keringat berlebih"
+                android:textSize="12sp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toTopOf="@+id/btn_next"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_kulit_bersisik" />
+
+            <Button
+                android:id="@+id/btn_next"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="16dp"
+                android:background="@drawable/button_shape"
+                android:text="LANJUT"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+
+
+</LinearLayout>

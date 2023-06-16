@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/iv_dialog_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:text="Saat Ini Fitur masih dalam proses pengembangan"
+        android:fontFamily="@font/quicksand_bold"
+        android:textColor="@color/brown_primary"/>
+
+    <Button
+        android:id="@+id/btn_oke"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="16dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/button_shape"
+        android:text="Oke"
+        android:textSize="12sp" />
+
+</LinearLayout>

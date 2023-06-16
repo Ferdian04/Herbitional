@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.detail_history.DetailHistoryActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tv_disease_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/quicksand_bold"
+            android:gravity="center"
+            android:textColor="@color/brown_primary"
+            android:textSize="18sp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="@string/disease_name" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="16dp">
+
+
+            <TextView
+                android:id="@+id/tv_disease_description1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:fontFamily="@font/quicksand_regular"
+                android:justificationMode="inter_word"
+                android:lineSpacingMultiplier="1"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="Masuk angin adalah istilah yang sering digunakan masyarakat Indonesia saat merasakan sekumpulan gejala yang berhubungan dengan tidak enak badan. Istilah ini dipakai untuk menggambarkan kondisi di mana dianggap ada banyak “angin” di dalam tubuhnya.Secara medis, masuk angin sebenarnya tidak ada. Tidak ada penjelasan medis mengenai penyebab, diagnosis, gejala, dan pengobatan masuk angin.Namun, istilah masuk angin sudah sangat wajar digunakan masyarakat, bahkan digunakan secara turun-temurun. Gejala yang dirasakan seperti demam, kembung, pilek, sakit kepala, dan nafsu makan menurun." />
+
+            <TextView
+                android:id="@+id/tv_disease_description2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:fontFamily="@font/quicksand_regular"
+                android:lineSpacingMultiplier="1"
+                android:justificationMode="inter_word"
+                android:text="Masuk angin adalah istilah yang sering digunakan masyarakat Indonesia saat merasakan sekumpulan gejala yang berhubungan dengan tidak enak badan. Istilah ini dipakai untuk menggambarkan kondisi di mana dianggap ada banyak “angin” di dalam tubuhnya.Secara medis, masuk angin sebenarnya tidak ada. Tidak ada penjelasan medis mengenai penyebab, diagnosis, gejala, dan pengobatan masuk angin.Namun, istilah masuk angin sudah sangat wajar digunakan masyarakat, bahkan digunakan secara turun-temurun. Gejala yang dirasakan seperti demam, kembung, pilek, sakit kepala, dan nafsu makan menurun."
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_disease_description1" />
+
+            <TextView
+                android:id="@+id/tv_disease_treatment1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:fontFamily="@font/quicksand_regular"
+                android:lineSpacingMultiplier="1"
+                android:justificationMode="inter_word"
+                android:text="Masuk angin adalah istilah yang sering digunakan masyarakat Indonesia saat merasakan sekumpulan gejala yang berhubungan dengan tidak enak badan. Istilah ini dipakai untuk menggambarkan kondisi di mana dianggap ada banyak “angin” di dalam tubuhnya.Secara medis, masuk angin sebenarnya tidak ada. Tidak ada penjelasan medis mengenai penyebab, diagnosis, gejala, dan pengobatan masuk angin.Namun, istilah masuk angin sudah sangat wajar digunakan masyarakat, bahkan digunakan secara turun-temurun. Gejala yang dirasakan seperti demam, kembung, pilek, sakit kepala, dan nafsu makan menurun."
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_disease_description2" />
+
+            <TextView
+                android:id="@+id/tv_disease_treatment2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:fontFamily="@font/quicksand_regular"
+                android:lineSpacingMultiplier="1"
+                android:justificationMode="inter_word"
+                android:text="Masuk angin adalah istilah yang sering digunakan masyarakat Indonesia saat merasakan sekumpulan gejala yang berhubungan dengan tidak enak badan. Istilah ini dipakai untuk menggambarkan kondisi di mana dianggap ada banyak “angin” di dalam tubuhnya.Secara medis, masuk angin sebenarnya tidak ada. Tidak ada penjelasan medis mengenai penyebab, diagnosis, gejala, dan pengobatan masuk angin.Namun, istilah masuk angin sudah sangat wajar digunakan masyarakat, bahkan digunakan secara turun-temurun. Gejala yang dirasakan seperti demam, kembung, pilek, sakit kepala, dan nafsu makan menurun."
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_disease_treatment1" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</LinearLayout>

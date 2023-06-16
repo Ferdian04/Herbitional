@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.form.otot.GejalaOtotSendiSarafActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/back"
+            android:layout_marginTop="32dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_gejala_otot_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="Gejala Otot, Sendi, Saraf"
+            android:textColor="@color/brown_primary"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_gejala_otot_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="Pilih gejala otot, sendi, saraf yang anda rasakan..."
+                android:textColor="@color/black"
+                android:layout_marginEnd="16dp"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_gejala_otot_note"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/quicksand_regular"
+                android:text="*(boleh kosong/lebih dari satu)"
+                android:layout_marginStart="16dp"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_gejala_otot_description" />
+
+            <CheckBox
+                android:id="@+id/cb_nyeri_perut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nyeri/Kram perut"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_gejala_otot_note" />
+
+            <CheckBox
+                android:id="@+id/cb_nyeri_persendian_tangan_kaki"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gejala terasa di persendian kecil tangan/kaki"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_nyeri_perut" />
+
+            <CheckBox
+                android:id="@+id/cb_nyeri_otot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nyeri otot"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_nyeri_persendian_tangan_kaki" />
+
+            <CheckBox
+                android:id="@+id/cb_nyeri_sendi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nyeri sendi"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_nyeri_otot" />
+
+            <CheckBox
+                android:id="@+id/cb_gerakan_sendi_terbatas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gerakan sendi terbatas"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_nyeri_sendi" />
+
+            <CheckBox
+                android:id="@+id/cb_area_teraba_keras"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Area teraba keras"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_gerakan_sendi_terbatas" />
+
+            <CheckBox
+                android:id="@+id/cb_area_menegang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Area terlihat menegang"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_area_teraba_keras" />
+
+            <CheckBox
+                android:id="@+id/cb_otot_tiba2_kontraksi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Otot kontraksi tiba-tiba dan tidak kunjung reda"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_area_menegang" />
+
+            <CheckBox
+                android:id="@+id/cb_kekakuan_sendi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kekakuan sendi di pagi hari selama lebih dari 1 jam"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_otot_tiba2_kontraksi" />
+
+            <CheckBox
+                android:id="@+id/cb_nyeri_bahu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nyeri yang menjalar ke area bahu/tulang belikat"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_kekakuan_sendi" />
+
+            <CheckBox
+                android:id="@+id/cb_kedutan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kedutan"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_nyeri_bahu" />
+
+            <CheckBox
+                android:id="@+id/cb_tubuh_kejang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Tubuh kejang"
+                android:textSize="12sp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/btn_next"
+                app:layout_constraintTop_toBottomOf="@+id/cb_kedutan" />
+
+            <Button
+                android:id="@+id/btn_next"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="16dp"
+                android:background="@drawable/button_shape"
+                android:text="LANJUT"
+                android:fontFamily="@font/quicksand_bold"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+
+
+</LinearLayout>

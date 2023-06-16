@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.form.lain.GejalaLainnyaActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/back"
+            android:layout_marginTop="32dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_gejala_lainnya_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="Gejala Lainnya"
+            android:layout_marginTop="32dp"
+            android:textColor="@color/brown_primary"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_gejala_lain_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="Pilih gejala lain yang anda rasakan..."
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_gejala_lain_note"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/quicksand_regular"
+                android:text="*(boleh kosong/lebih dari satu)"
+                android:layout_marginStart="16dp"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_gejala_lain_description" />
+
+            <CheckBox
+                android:id="@+id/cb_riwayat_asam_urat_genetik"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Riwayat penyakit asam urat pada keluarga"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_gejala_lain_note" />
+
+            <CheckBox
+                android:id="@+id/cb_anemia_berat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Anemia berat"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_riwayat_asam_urat_genetik" />
+
+            <CheckBox
+                android:id="@+id/cb_berusia_5_6_tahun"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Berusia 6 bulan - 5 tahun"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_anemia_berat" />
+
+            <CheckBox
+                android:id="@+id/cb_kaki_gajah"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kaki gajah"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_berusia_5_6_tahun" />
+
+            <CheckBox
+                android:id="@+id/cb_perut_bengkak"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Perut bengkak"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_kaki_gajah" />
+
+            <CheckBox
+                android:id="@+id/cb_stress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Stresss"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_perut_bengkak" />
+
+            <CheckBox
+                android:id="@+id/cb_perubahan_emosi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Perubahan Emosional"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_stress" />
+
+            <CheckBox
+                android:id="@+id/cb_mulut_keluar_busa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Keluar busa dari mulut"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_perubahan_emosi" />
+
+            <CheckBox
+                android:id="@+id/cb_halusinasi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Halusinasi"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_mulut_keluar_busa" />
+
+            <CheckBox
+                android:id="@+id/cb_habis_bepergian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Habis berpergian"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_halusinasi" />
+
+            <CheckBox
+                android:id="@+id/cb_demam_tinggi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Demam tinggi"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_habis_bepergian" />
+
+            <CheckBox
+                android:id="@+id/cb_kehilangan_kesadaran"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Penurunan/kehilangan kesadaran"
+                android:textSize="12sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_demam_tinggi" />
+
+            <CheckBox
+                android:id="@+id/cb_hamil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Hamil"
+                android:textSize="12sp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/btn_diagnose"
+                app:layout_constraintTop_toBottomOf="@+id/cb_kehilangan_kesadaran" />
+
+            <Button
+                android:id="@+id/btn_diagnose"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="16dp"
+                android:background="@drawable/button_shape"
+                android:text="DIAGNOSA"
+                android:textSize="16sp"
+                android:fontFamily="@font/quicksand_bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+
+
+</LinearLayout>
