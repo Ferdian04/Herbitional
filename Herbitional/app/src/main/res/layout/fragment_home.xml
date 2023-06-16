@@ -46,18 +46,6 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:id="@+id/iv_logout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:contentDescription="logout"
-                android:src="@drawable/ic_logout"
-                app:layout_constraintBottom_toBottomOf="@+id/tv_name"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/tv_name" />
-
-
-            <ImageView
                 android:id="@+id/iv_container"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"

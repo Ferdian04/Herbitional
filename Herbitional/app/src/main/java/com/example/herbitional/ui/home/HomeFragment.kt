@@ -43,31 +43,16 @@ class HomeFragment : Fragment() {
             val intent = Intent(requireContext(),WelcomeActivity::class.java)
             startActivity(intent)
         }
-
-
-        binding.ivLogout.setOnClickListener {
-            showLogOutDialog()
-        }
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-//        isLoginCheck()
         setupListMedicine()
         getAllMedicine()
 
     }
-
-//    private fun isLoginCheck() {
-//        viewModel.getSession().observe(this) {
-//            if (it != null && it == false) {
-//                val intent = Intent(requireContext(), LoginActivity::class.java)
-//                startActivity(intent)
-//            }
-//        }
-//    }
 
     private fun setupListMedicine(){
         viewModel.medicineList.observe(this) {
@@ -78,30 +63,6 @@ class HomeFragment : Fragment() {
                 binding.rvMedicineRecomendation.adapter = adapter
                 showLoading(false)
             }
-        }
-    }
-
-    private fun showLogOutDialog(){
-        val dialogView = LayoutInflater.from(requireContext()).inflate(R.layout.dialog_logout, null)
-        val dialogBuilder = AlertDialog.Builder(requireContext())
-            .setView(dialogView)
-            .setCancelable(false)
-
-        val dialog = dialogBuilder.show()
-
-        val btnCancel = dialogView.findViewById<Button>(R.id.btn_cancel)
-        val btnLogOut = dialogView.findViewById<Button>(R.id.btn_logout)
-
-        btnCancel.setOnClickListener {
-            dialog.dismiss()
-        }
-
-        btnLogOut.setOnClickListener {
-            viewModel.logout()
-            val intent = Intent(requireContext(), LoginActivity::class.java)
-            startActivity(intent)
-            requireActivity().finishAffinity()
-            dialog.dismiss()
         }
     }
 
