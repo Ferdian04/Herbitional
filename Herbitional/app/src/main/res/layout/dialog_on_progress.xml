@@ -9,6 +9,8 @@
         android:id="@+id/iv_dialog_message"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
         android:textAlignment="center"
         android:textSize="16sp"
         android:text="Saat Ini Fitur masih dalam proses pengembangan"
