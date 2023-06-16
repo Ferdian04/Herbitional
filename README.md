@@ -13,3 +13,6 @@ Herbitional Mobile App build with native kotlin 1.7.0 and using retrofit to acce
 - Search Page implement text classification algorithm from Machine Learning
 - Profile Page (OnProgress/TBA)
 
+## Herbitional UI
+
+![Nama Alternatif](https://drive.google.com/file/d/1E5XTPUciZeEEHBESTm1vK6A4Blkh1sC9/view)
