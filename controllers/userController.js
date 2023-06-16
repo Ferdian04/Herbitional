@@ -4,7 +4,7 @@ exports.profile = async (req, res) => {
   try {
     console.log("Profile .....");
     const { jwt } = req;
-    console.log(jwt.user_id);
+
     db = `
     SELECT tabel_riwayat_user.id_riwayat, tabel_penyakit.id_penyakit, tabel_penyakit.nama_penyakit
     FROM tabel_riwayat_user
@@ -12,19 +12,15 @@ exports.profile = async (req, res) => {
     WHERE tabel_riwayat_user.user_id = "${jwt.user_id}"
     `;
 
-    db1 = `SELECT fullname, user_email FROM user_login WHERE user_id = ${jwt.user_id}`;
-
     connection.query(db, function (err, data) {
-      connection.query(db1, function (err, data1) {
-        const fullname = data1[0].fullname;
-        const user_email = data1[0].user_email;
-        return res.status(201).json({
-          status: "Success",
-          requestAt: new Date().toISOString(),
-          fullname: fullname,
-          user_email: user_email,
-          riwayat: data,
-        });
+      const fullname = jwt.fullname;
+      const user_email = jwt.user_email_address;
+      return res.status(201).json({
+        status: "Success",
+        requestAt: new Date().toISOString(),
+        fullname: fullname,
+        user_email: user_email,
+        riwayat: data,
       });
     });
   } catch (err) {
