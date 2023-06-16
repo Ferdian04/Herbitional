@@ -13,6 +13,9 @@ This is ML Model and API Service for Capstone Project on Bangkit 2023. For Api D
 - scikit-learn 1.2.2
 - tensorflow 2.9.3
 
+# Dataset
+https://drive.google.com/drive/folders/1LN_P-naMNHDxxtwHe2Z7p4ownJ5igEZR?usp=sharing
+
 # Herbitional ML API Documentation
 
 URL: https://predict-disease-hzyvjvw72a-uc.a.run.app/{endpoint}
