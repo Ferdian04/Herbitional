@@ -124,12 +124,10 @@ URL: https://herbitional-v3-hzyvjvw72a-uc.a.run.app/api/{version}/{Group}/{endpo
 - Headers:
   - `Authorization` : Bearer < Access-Token >
 - Request Body:
-  - `user_id` : integer
   - `penyakit_id`: integer
 
 ```
 {
-    user_id : 26,
     penyakit_id: 1
 }
 ```
@@ -195,7 +193,7 @@ URL: https://herbitional-v3-hzyvjvw72a-uc.a.run.app/api/{version}/{Group}/{endpo
 }
 ```
 
-### [2] - 
+### [2] - Specific Medicine
 
 - URL:
   - https://herbitional-v3-hzyvjvw72a-uc.a.run.app/api/v1/medicine/specificmed/:id_artikel
