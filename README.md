@@ -15,4 +15,16 @@ Herbitional Mobile App build with native kotlin 1.7.0 and using retrofit to acce
 
 ## Herbitional UI
 
-![Nama Alternatif](https://drive.google.com/file/d/1E5XTPUciZeEEHBESTm1vK6A4Blkh1sC9/view)
+### Home
+![Nama Alternatif](https://storage.googleapis.com/herbitionalbucket/github/App1.png)
+
+### Predict
+![Nama Alternatif](https://storage.googleapis.com/herbitionalbucket/github/App2.png)
+
+![Nama Alternatif](https://storage.googleapis.com/herbitionalbucket/github/App3.png)
+
+![Nama Alternatif](https://storage.googleapis.com/herbitionalbucket/github/App4.png)
+
+### Search
+![Nama Alternatif](https://storage.googleapis.com/herbitionalbucket/github/App5.png)
+
